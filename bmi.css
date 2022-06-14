@@ -61,7 +61,17 @@ h1
 }
 
 /*reponsiveness*/
-@media only screen and (min-width:350px)
+@media only screen and (min-width:325px)
+{
+    #content1{
+        left: 0px;
+        width: 300px;
+    }
+    #content2{
+        left: 46px;
+    }
+} 
+@media only screen and (min-width:375px)
 {
     #content1{
         left: 10px;
