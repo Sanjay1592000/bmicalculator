@@ -8,10 +8,11 @@ function tran(){
     a.style.color = "white";
 }
 function BMI(){
-    let a, b, c, d;
+    let a, b, b1, c, d;
     a = parseFloat(num1.value);
     b = parseFloat(num2.value);
-    c = a/Math.pow(b,2);
+    b1 = b*0.01;
+    c = a/Math.pow(b1,2);
     d = out;
     if((c >30))
     {
