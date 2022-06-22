@@ -1,0 +1,133 @@
+body
+{
+    margin: 0 0;
+    color: white;
+    background-color: blue;
+}
+.animate1, .animate2
+{
+    width: 100px;
+    height: 100px;
+    background-color: blue ;
+    animation-name: change-color, change-size ;
+    animation-duration: 6s, 6s;
+    animation-delay: 2s, 2s;
+    animation-iteration-count: infinite, infinite;
+}
+#lbs
+{
+    display: none;
+}
+@keyframes change-color {
+    25% { background-color: #15ff00; }
+    50% { background-color: #fff459; }
+    75% { background-color: #bd0000; }
+}
+@keyframes change-size{
+    50% { height: 450px;}
+}
+#container
+{
+    width: 100vw;
+    height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+#content1
+{
+    width: 400px;
+    height: 500px;
+    background-color: blue;
+    border-radius: 15px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    gap: 15px;
+    box-shadow: rgb(0, 0, 189) -5px -5px 10px 4px, rgb(0, 37, 201) 5px 5px 10px 4px;
+}
+input , button
+{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid white;
+    transition: 300ms;
+}
+p
+{
+    position: relative;
+    top: -15px;
+}
+#switch
+{
+    left: -25px;
+}
+#content2
+{
+    height: 50px;
+    width: 188px;
+    background-color: white;
+    border-radius: 10px;
+    color: rgb(165, 165, 165);
+    padding: 10px 10px;
+}
+input:focus , button:hover
+{
+    width: 250px;
+    transition: 500ms;
+    box-shadow: rgb(5, 0, 77) 0px 0px 25px 4px;
+}
+@media only screen and (max-width: 450px)
+{
+    #content1
+    {
+        width: 300px;
+    }
+}
+@media only screen and (max-width: 850px)
+{
+    #container
+    {
+        flex-direction: column;
+    }
+    .animate1, .animate2
+    {
+        width: 0px;
+        height: 0px;
+        animation-name: none ;
+    }
+}
+@media only screen and (min-width: 1532px)
+{
+    #content1 
+    {
+        font-size: 24px;
+        width: 650px;
+        height: 650px;
+    }
+    #content2
+    {
+        width: 288px;
+        height: 200px;
+    }
+    #switch
+    {
+        left: -40px;
+    }
+    input , button 
+    {
+        width: 300px;
+        height: 75px;
+    }
+    input:focus , button:hover
+    {
+        width: 350px;
+        transition: 500ms;
+    }
+    @keyframes change-size{
+        50% { height: 600px;}
+    }
+}
