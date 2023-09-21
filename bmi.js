@@ -2,11 +2,19 @@ let num1 = document.getElementById("weight");
 let num2 = document.getElementById("height");
 let num3 = document.getElementById("lbs");
 let out = document.getElementById("content2");
+let bg = document.getElementsByClassName("container")
+let gradbg = "linear-gradient(180deg, rgb(36, 36, 36) 0%, rgb(83, 83, 83) 80%, 	rgb(126, 93, 51) 80% , rgb(124, 104, 78)100%)";
+let gradbg1 = "linear-gradient(180deg, rgb(111, 188, 194) 0%, rgb(169, 195, 197) 80%, 	rgb(189, 138, 72) 80% , rgb(247, 207, 156)100%)";
+let gradbg2 = "linear-gradient(180deg, rgb(194, 189, 111) 0%, rgb(197, 194, 169) 80%, 	rgb(189, 138, 72) 80% , rgb(247, 207, 156)100%)";
+let gradbg3 = "linear-gradient(180deg, rgb(194, 144, 111) 0%, rgb(255, 224, 157) 80%, 	rgb(189, 138, 72) 80% , rgb(247, 207, 156)100%)";
+let gradsun1 = "radial-gradient(circle at top left,#eeff00 0% 8%, transparent 15% 100%)";
+let gradsun2 = "radial-gradient(circle at top center,#ffbb00 0% 8%, transparent 15% 100%)";
+let gradsun3 = "radial-gradient(circle at top right,#ff0000 0% 8%, transparent 15% 100%)";
 function tran(){
     let a;
     a = document.getElementById("content2");
     a.style.transition = "500ms";
-    a.style.color = "white";
+    a.style.color = "black";
 }
 function BMI(){
     let a, b, b1, a1, a2, a3, c, d, e;
@@ -27,25 +35,29 @@ function BMI(){
     if(c >30)
     {
         d.innerHTML = "the BMI value is "+c+" you're in the obese range.";
-        d.style.backgroundColor = "red";
+        bg[0].style.background = gradsun3;
+        document.body.style.background = gradbg3;
         tran();
     }
     else if((c >= 25) && (c <= 30))
     {
         d.innerHTML = "the BMI value is "+c+" you're in the overweight range";
-        d.style.backgroundColor = "orange";
+        bg[0].style.background = gradsun2;
+        document.body.style.background = gradbg2;
         tran();
     }
     else if((c >= 18.5) && (c <=24.9))
     {
         d.innerHTML = "the BMI value is "+c+" you're in the healthy weight range.";
-        d.style.backgroundColor = "green";
+        bg[0].style.background = gradsun1;
+        document.body.style.background = gradbg1;
         tran();
     }
     else
     {
         d.innerHTML = "the BMI value is "+c+" you're in the underweight range.";
-        d.style.backgroundColor = "red";
+        bg[0].style.background = "none";
+        document.body.style.background = gradbg;
         tran();
     }
 } 
